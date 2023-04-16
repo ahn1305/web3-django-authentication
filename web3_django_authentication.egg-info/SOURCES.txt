@@ -1,7 +1,14 @@
+__init__.py
+apps.py
+backend.py
+forms.py
+settings.py
 setup.py
+urls.py
+utils.py
+views.py
 web3_django_authentication.egg-info/PKG-INFO
 web3_django_authentication.egg-info/SOURCES.txt
 web3_django_authentication.egg-info/dependency_links.txt
-web3_django_authentication.egg-info/entry_points.txt
 web3_django_authentication.egg-info/requires.txt
 web3_django_authentication.egg-info/top_level.txt

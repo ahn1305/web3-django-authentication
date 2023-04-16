@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: web3-django-authentication
-Version: 0.1.0
+Version: 0.0.1
 Summary: Integrate metamask with django
 Home-page: https://github.com/ahn1305/web3-django-authentication
 Author: Ashwin B
