@@ -46,7 +46,7 @@ if sys.argv[-1] == 'tag':
 
 setup(
     name='web3-django-authentication',
-    version=0.0.1,
+    # version=0.0.1,
     description="web3-django-authentication is a pluggable Django app that enables login/signup via Metamask.",
     # long_description=readme + '\n\n' + history,
     author='Ashwin',
