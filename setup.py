@@ -5,11 +5,9 @@ setup(
     version='0.1.0',
     packages=find_packages(),
     install_requires=['ethereum==2.3.2', 'rlp<=2.0.0', 'eth_utils>=1.0.3', 'Django>=2.0'],
-    entry_points={
-        'console_scripts': [
-            'web3-django-authentication=web3auth.views:main',
-        ],
-    },
+    packages=[
+        'web3auth',
+    ],
     author='Ashwin B',
     author_email='ahnashwin1305@gmail.com',
     description='Integrate metamask with django' 	 	,
