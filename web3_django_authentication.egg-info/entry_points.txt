@@ -1,0 +1,3 @@
+[console_scripts]
+web3-django-authentication = web3auth.views:main
+
