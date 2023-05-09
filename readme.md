@@ -252,8 +252,7 @@ Congrats, now you have successfully added meta mask authentication to your Djang
 
 **Output:**
 
-<source src="https://github.com/ahn1305/web3-django-authentication/blob/main/web3authdjango.mp4" type="video/mp4">.
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O19PeGDL8Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## Common Issues
