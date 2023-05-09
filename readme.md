@@ -252,8 +252,9 @@ Congrats, now you have successfully added meta mask authentication to your Djang
 
 **Output:**
 
-<video src="[web3authdjango.mp4](https://github.com/ahn1305/web3-django-authentication/blob/main/web3authdjango.mp4)"></video>
-
+<video controls="" width="800" height="500" muted="" loop="" autoplay="">
+<source src="https://github.com/ahn1305/web3-django-authentication/blob/main/web3authdjango.mp4" type="video/mp4">
+</video>
 
 
 ## Common Issues
@@ -275,6 +276,5 @@ In second command replace 3.9 with the version you are using.
 <a href="https://github.com/ahn1305/web3-django-authentication/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ahn1305/web3-django-authentication" />
 </a>
-
 
 Made with [contrib.rocks](https://contrib.rocks).
