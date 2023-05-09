@@ -268,3 +268,13 @@ sudo apt install libpython3.9-dev
 ```
 
 In second command replace 3.9 with the version you are using.
+
+
+## Contributers
+
+<a href="https://github.com/ahn1305/web3-django-authentication/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ahn1305/web3-django-authentication" />
+</a>
+
+
+Made with [contrib.rocks](https://contrib.rocks).
