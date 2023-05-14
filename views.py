@@ -12,6 +12,7 @@ from django.views.decorators.http import require_http_methods
 
 from web3auth.forms import LoginForm, SignupForm
 from web3auth.settings import app_settings
+from django.contrib import messages
 
 
 
@@ -28,6 +29,37 @@ def get_redirect_url(request):
         return url
 
 
+# @require_http_methods(["GET", "POST"])
+# def login_api(request):
+#     if request.method == 'GET':
+#         token = ''.join(random.SystemRandom().choice(string.ascii_uppercase + string.digits) for i in range(32))
+#         request.session['login_token'] = token
+#         return JsonResponse({'data': token, 'success': True})
+#     else:
+#         token = request.session.get('login_token')
+#         if not token:
+#             return JsonResponse({'error': _(
+#                 "No login token in session, please request token again by sending GET request to this url"),
+#                 'success': False})
+#         else:
+#             form = LoginForm(token, request.POST)
+#             if form.is_valid():
+#                 signature, address = form.cleaned_data.get("signature"), form.cleaned_data.get("address")
+#                 del request.session['login_token']
+#                 user = authenticate(request, token=token, address=address, signature=signature)
+
+#                 if user:
+#                     login(request, user, 'web3auth.backend.Web3Backend')
+
+#                     return JsonResponse({'success': True, 'redirect_url': get_redirect_url(request), 'message': _('Login successful. Welcome!') })
+#                 else:
+#                     error = _("Can't find a user for the provided signature with address {address}").format(
+#                         address=address)
+#                     return JsonResponse({'success': False, 'error': error})
+#             else:
+#                 return JsonResponse({'success': False, 'error': json.loads(form.errors.as_json())})
+
+
 @require_http_methods(["GET", "POST"])
 def login_api(request):
     if request.method == 'GET':
@@ -37,9 +69,8 @@ def login_api(request):
     else:
         token = request.session.get('login_token')
         if not token:
-            return JsonResponse({'error': _(
-                "No login token in session, please request token again by sending GET request to this url"),
-                'success': False})
+            messages.error(request, _("No login token in session, please request token again by sending GET request to this url"))
+            return JsonResponse({'success': False})
         else:
             form = LoginForm(token, request.POST)
             if form.is_valid():
@@ -50,13 +81,22 @@ def login_api(request):
                 if user:
                     login(request, user, 'web3auth.backend.Web3Backend')
 
+                    # Set a success message using the messages framework
+                    messages.success(request, _("You have been logged in successfully!"))
+
                     return JsonResponse({'success': True, 'redirect_url': get_redirect_url(request)})
                 else:
                     error = _("Can't find a user for the provided signature with address {address}").format(
                         address=address)
-                    return JsonResponse({'success': False, 'error': error})
+                    messages.error(request, error)
+                    return JsonResponse({'success': False})
             else:
-                return JsonResponse({'success': False, 'error': json.loads(form.errors.as_json())})
+                error_messages = form.errors.as_data()
+                for field, errors in error_messages.items():
+                    for error in errors:
+                        messages.error(request, f"{field}: {error}")
+                return JsonResponse({'success': False})
+
 
 
 @require_http_methods(["POST"])

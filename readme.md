@@ -1,4 +1,4 @@
-# Web3-Auth-Django (Beta 0.5)
+# Web3-Auth-Django (Beta 0.6)
 
 Web3-Auth-Django allows user to login to the Django application with the help of meta-mask. 
 
@@ -247,6 +247,19 @@ Make Sure to add LOGIN_REDIRECT_URL in the settings.py file
 ```
 LOGIN_REDIRECT_URL = 'route where you want to redirect after login'
 ```
+
+To fetch the login successful message in the frontend side use this
+``` 
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+```
+**Note**: You can create your own success message class.
 
 Congrats, now you have successfully added meta mask authentication to your Django project
 
