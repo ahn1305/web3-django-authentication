@@ -32,13 +32,6 @@ AUTHENTICATION_BACKENDS = [
 'web3auth.backend.Web3Backend'
 ]
 ```
-
-And if you want to get email from user while signup
-
-```
-WEB3AUTH_USER_SIGNUP_FIELDS = ['email',]
-```
-
 Add web3-Auth-Django to URL patterns:
 
 ```
