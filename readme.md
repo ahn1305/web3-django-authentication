@@ -1,4 +1,4 @@
-# Web3-Auth-Django (Beta 0.6)
+# Web3-Auth-Django (Beta 0.7)
 
 Web3-Auth-Django allows user to login to the Django application with the help of meta-mask. 
 
@@ -12,7 +12,7 @@ Install the package
 
 Since the package is still under development stage, the beta version of the package is given as wheel file. Download the wheel file and them pip install it.
 
-`pip install web3_auth_django-0.5-py3-none-any.whl`
+`pip install web3_auth_django-0.7-py3-none-any.whl`
 
 Add it to your **INSTALLED_APPS**:
 
