@@ -1,8 +1,8 @@
-# Web3-Auth-Django (Beta 0.7)
+# Web3-Auth-Django
 
 Web3-Auth-Django allows user to login to the Django application with the help of meta-mask. 
 
-**Note:** This project is not entirely built from scratch, this is the newest version of an old project which we found on the internet. The old project had lot of errors but this version is coming with complete bug fixes and upgrades (The older version was causing a lot of errors.). Also supported in **Django version >= 2.0 and <=3.0**
+**Note:** This project is not entirely built from scratch, this is the newest version of an old project which we found on the internet. The old project had lot of errors but this version is coming with complete bug fixes and upgrades (The older version was causing a lot of errors.). Also this package perfectly works fine in linux machines, but when it comes to windows it has the following error.
 
 **Also there is no such package in Django till date to connect meta-mask and Django.** (purely based on our research)
 
@@ -12,7 +12,7 @@ Install the package
 
 Since the package is still under development stage, the beta version of the package is given as wheel file. Download the wheel file and them pip install it.
 
-`pip install web3_auth_django-0.7-py3-none-any.whl`
+`pip install `
 
 Add it to your **INSTALLED_APPS**:
 
@@ -279,6 +279,9 @@ sudo apt install libpython3.9-dev
 
 In second command replace 3.9 with the version you are using.
 
+**Windows**
+while installing the main package in windows you may get the following issue:
+https://github.com/ethereum/ethash/issues/131 (this has the solution for the issue)
 
 ## Contributers
 
